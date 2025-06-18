@@ -22,6 +22,7 @@ The chatbot can help explain:
 - How to take photos with your phone
 - What are passwords?
 - How to connect to WiFi
+- And many more...
 
 ## Installation & Setup
 
@@ -33,23 +34,26 @@ The chatbot can help explain:
    ```bash
    pip install -r requirements.txt
    ```
+3. **Add api key for openrouter in .env file**:
+   - Create a .env file in the main directory.
+   - Create a api key at openrouter's website if you haven't.
+   - Add the api key in the .env file with name API_KEY
 
-3. **Run the app**:
+4. **Run the app**:
    ```bash
    streamlit run App.py
    ```
 
-4. **Open your browser**:
+5. **Open your browser**:
    - The app will automatically open in your default web browser
    - If it doesn't, go to: http://localhost:8501
 
 ## How to Use
 
-1. **Enter your name** in the sidebar when you first open the app
-2. **Type your question** in the chat box at the bottom
-3. **Click "Send"** or press Enter to get an answer
-4. **Try the example questions** in the sidebar for quick start
-5. **Ask follow-up questions** if you need more clarification
+1. **Type your question** in the chat box at the bottom
+2. **Click "Send"** or press Enter to get an answer
+3. **Try the example questions** in the sidebar for quick start
+4. **Ask follow-up questions** if you need more clarification
 
 ## System Requirements
 
