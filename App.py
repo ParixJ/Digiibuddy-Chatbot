@@ -4,7 +4,7 @@ import os
 from api_calls import get_response
 
 load_dotenv()
-api_key = os.getenv('API_KEY')
+st.session_state.api_key = os.getenv('API_KEY')
 
 st.set_page_config(page_title="DigiBuddy Chatbot", page_icon="💬", layout="centered")
 st.title("DigiBuddy 🤖 - Your Friendly Tech Buddy")
@@ -55,7 +55,7 @@ if user_input := st.chat_input("Ask me anything about using digital tools..."):
 
     with st.chat_message("assistant"):
         with st.spinner("Generating Output..."):
-            response = get_response(user_input, api_key)
+            response = get_response(user_input, st.session_state.api_key)
             if 'error' in response:
                 message = response['error'].get('message', 'Oops, something went wrong.')
                 st.error(message)
