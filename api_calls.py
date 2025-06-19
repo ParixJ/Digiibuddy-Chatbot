@@ -1,7 +1,5 @@
 import requests
 import json
-from dotenv import load_dotenv
-import os
 
 def get_response(user_input,api_key):
     model = "mistralai/mixtral-8x22b-instruct"

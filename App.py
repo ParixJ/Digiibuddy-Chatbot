@@ -5,6 +5,7 @@ from api_calls import get_response
 
 load_dotenv()
 api_key = os.getenv('API_KEY')
+st.markdown(api_key)
 
 st.set_page_config(page_title="DigiBuddy Chatbot", page_icon="💬", layout="centered")
 st.title("DigiBuddy 🤖 - Your Friendly Tech Buddy")
