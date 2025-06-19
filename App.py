@@ -17,7 +17,7 @@ st.markdown("""
         .stTextInput > div > div > input { font-size: 1.2em; }
     </style>
 """, unsafe_allow_html=True)
-st.markdown(st.session_state.api_key)
+
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
