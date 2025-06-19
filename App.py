@@ -7,6 +7,7 @@ load_dotenv()
 api_key = os.getenv('API_KEY')
 st.markdown(api_key)
 
+
 st.set_page_config(page_title="DigiBuddy Chatbot", page_icon="💬", layout="centered")
 st.title("DigiBuddy 🤖 - Your Friendly Tech Buddy")
 st.caption("Helping parents and seniors master the digital world 🌐")
