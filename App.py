@@ -1,7 +1,9 @@
 import streamlit as st
+from dotenv import load_dotenv
 import os
 from api_calls import get_response
 
+load_dotenv()
 api_key = os.getenv('API_KEY')
 
 st.set_page_config(page_title="DigiBuddy Chatbot", page_icon="💬", layout="centered")
@@ -56,7 +58,7 @@ if user_input := st.chat_input("Ask me anything about using digital tools..."):
             response = get_response(user_input, api_key)
             if 'error' in response:
                 message = response['error'].get('message', 'Oops, something went wrong.')
-                st.error('message', 'Oops, something went wrong.')
+                st.error('Oops, something went wrong.')
                 st.session_state.messages.append({"role": "assistant", "content": message})
             else:
                 reply = response['choices'][0]['message']['content']
