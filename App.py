@@ -58,7 +58,7 @@ if user_input := st.chat_input("Ask me anything about using digital tools..."):
             response = get_response(user_input, api_key)
             if 'error' in response:
                 message = response['error'].get('message', 'Oops, something went wrong.')
-                st.error('Oops, something went wrong.')
+                st.error(message)
                 st.session_state.messages.append({"role": "assistant", "content": message})
             else:
                 reply = response['choices'][0]['message']['content']
