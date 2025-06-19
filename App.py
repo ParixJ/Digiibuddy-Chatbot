@@ -5,7 +5,6 @@ from api_calls import get_response
 
 load_dotenv()
 api_key = os.getenv('API_KEY')
-st.markdown(api_key)
 
 
 st.set_page_config(page_title="DigiBuddy Chatbot", page_icon="💬", layout="centered")
@@ -19,6 +18,7 @@ st.markdown("""
         .stTextInput > div > div > input { font-size: 1.2em; }
     </style>
 """, unsafe_allow_html=True)
+st.markdown(api_key)
 
 # Initialize chat history
 if "messages" not in st.session_state:
